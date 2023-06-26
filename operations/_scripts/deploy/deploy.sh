@@ -49,7 +49,7 @@ $GENERATE_SCRIPTS_PATH/generate_provider.sh
 $GENERATE_SCRIPTS_PATH/generate_tf_vars.sh
 
 # Generate dot_env
-# $GENERATE_SCRIPTS_PATH/generate_dot_env.sh
+$GENERATE_SCRIPTS_PATH/generate_dot_env.sh
 
 # Generate app repo
 $GENERATE_SCRIPTS_PATH/generate_app_repo.sh
@@ -58,7 +58,7 @@ $GENERATE_SCRIPTS_PATH/generate_app_repo.sh
 $GENERATE_SCRIPTS_PATH/generate_bitops_config.sh
 
 # Generate Ansible playbook
-# $GENERATE_SCRIPTS_PATH/generate_ansible_playbook.sh
+$GENERATE_SCRIPTS_PATH/generate_ansible_playbook.sh
 
 if isDebugMode; then
   cmd="ls -al $OPS_REPO_TERRAFORM_PATH/" && echo $cmd && $cmd

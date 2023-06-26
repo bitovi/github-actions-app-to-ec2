@@ -27,7 +27,7 @@ OPS_REPO_TERRAFORM_PATH="$OPS_ENV_PATH/terraform"
 GITHUB_REPO_NAME=$(echo "$GITHUB_REPOSITORY" | sed 's/^.*\///')
 export GITHUB_REPO_NAME
 
-# Generate buckets identifiers and check them agains Azure Rules 
+# Generate buckets identifiers and check them against the Rules 
 source "$DEPLOY_SCRIPTS_PATH/check_bucket_name.sh"
 
 TF_STATE_BUCKET="$($GENERATE_SCRIPTS_PATH/generate_buckets_identifiers.sh tf | xargs)"

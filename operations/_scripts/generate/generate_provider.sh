@@ -36,7 +36,7 @@ terraform {
   }
 }
 
-provider "aws\ {
+provider "aws" {
   region = "$AWS_DEFAULT_REGION"
   default_tags {
     tags = merge(

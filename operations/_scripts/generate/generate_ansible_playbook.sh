@@ -19,7 +19,7 @@ echo -en "- name: Ensure hosts is up and running
 
 - name: Ansible tasks
   hosts: bitops_servers
-  become: true
+  become: yes
   tasks:
 " > $PLAYBOOK_PATH
 

@@ -33,7 +33,7 @@ app_branch_name="app_branch_name = \"${GITHUB_BRANCH_NAME}\""
 app_install_root="app_install_root = \"/home/ubuntu\""
 security_group_name="security_group_name = \"${GITHUB_IDENTIFIER}\""
 AWS_RESOURCE_IDENTIFIER="AWS_RESOURCE_IDENTIFIER = \"${GITHUB_IDENTIFIER}\""
-AWS_RESOURCE_IDENTIFIER="AWS_RESOURCE_IDENTIFIER = \"${GITHUB_IDENTIFIER_SS}\""
+AWS_RESOURCE_IDENTIFIER_SUPERSHORT="AWS_RESOURCE_IDENTIFIER_SUPERSHORT = \"${GITHUB_IDENTIFIER_SS}\""
 
 # Special cases
 
@@ -62,8 +62,8 @@ lb_access_bucket_name=$(generate_var lb_access_bucket_name $LB_LOGS_BUCKET)
 # ec2_instance_type=$(generate_var ec2_instance_type $EC2_INSTANCE_TYPE)
 # ec2_iam_instance_profile=$(generate_var ec2_iam_instance_profile EC2_INSTANCE_PROFILE - Special case
 #-- AWS --#
-# AWS_RESOURCE_IDENTIFIER=$(generate_var AWS_RESOURCE_IDENTIFIER AWS_RESOURCE_IDENTIFIER - Fixed
-# AWS_RESOURCE_IDENTIFIER=$(generate_var AWS_RESOURCE_IDENTIFIER AWS_RESOURCE_IDENTIFIER - Fixed
+# AWS_RESOURCE_IDENTIFIER_SUPERSHORT=$(generate_var AWS_RESOURCE_IDENTIFIER_SUPERSHORT AWS_RESOURCE_IDENTIFIER_SUPERSHORT - Fixed
+# AWS_RESOURCE_IDENTIFIER_SUPERSHORT=$(generate_var AWS_RESOURCE_IDENTIFIER_SUPERSHORT AWS_RESOURCE_IDENTIFIER_SUPERSHORT - Fixed
 # aws_secret_env=$(generate_var aws_secret_env $AWS_SECRET_ENV)
 # aws_ami_id=$(generate_var aws_ami_id $AWS_AMI_ID)
 #-- Certificates --#
@@ -106,8 +106,8 @@ $lb_access_bucket_name
 $security_group_name
 
 #-- AWS --#
-$AWS_RESOURCE_IDENTIFIER
-$AWS_RESOURCE_IDENTIFIER
+$AWS_RESOURCE_IDENTIFIER_SUPERSHORT
+$AWS_RESOURCE_IDENTIFIER_SUPERSHORT
 
 #-- Certificates --#
 $sub_domain_name

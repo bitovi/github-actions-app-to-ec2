@@ -1,0 +1,25 @@
+# this was key for understanding .envfile synax:
+# This file should use the syntax `<variable>=value` (which sets the variable to the given value) 
+# or <variable> (which takes the value from the local environment), and # for comments.
+# In other words, don't do `VAR1=$SOME_OTHER_ENV_VAR`
+# https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file
+
+#
+# This file sets environment variables for the running bitops docker container
+# 
+
+DEBUG_MODE
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+AWS_SESSION_TOKEN
+AWS_DEFAULT_REGION
+BITOPS_ENVIRONMENT
+SKIP_DEPLOY_TERRAFORM
+SKIP_DEPLOY_HELM
+BITOPS_TERRAFORM_COMMAND
+TERRAFORM_DESTROY
+ANSIBLE_SKIP_DEPLOY
+TF_STATE_BUCKET
+TF_STATE_BUCKET_DESTROY
+BITOPS_FAST_FAIL
+DEFAULT_FOLDER_NAME="_default"

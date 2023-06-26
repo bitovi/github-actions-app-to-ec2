@@ -1,0 +1,6 @@
+bitops:
+  deployments:
+    terraform:
+    #   plugin: terraform
+    # ansible:
+    #   plugin: ansible

@@ -181,6 +181,11 @@ inputs:
   efs_mount_target:
     description: "Directory path in efs to mount directory to, default is `/`"
 
+  DEBUG_MODE:
+    description: 'Set to "true" to enable debug mode'
+    required: false
+    default: 'false'
+
 outputs:
   vm_url:
     description: "The URL of the generated app"
@@ -253,6 +258,8 @@ runs:
         APPLICATION_MOUNT_TARGET: ${{ inputs.application_mount_target }}
         EFS_MOUNT_TARGET: ${{ inputs.efs_mount_target }}
         DATA_MOUNT_TARGET: ${{ inputs.data_mount_target }}
+        DEBUG_MODE: ${{ inputs.DEBUG_MODE }}
+
 
       run: |
         echo "running operations/_scripts/deploy/deploy.sh"

@@ -32,8 +32,8 @@ app_repo_name="app_repo_name = \"${GITHUB_REPO_NAME}\""
 app_branch_name="app_branch_name = \"${GITHUB_BRANCH_NAME}\""
 app_install_root="app_install_root = \"/home/ubuntu\""
 security_group_name="security_group_name = \"${GITHUB_IDENTIFIER}\""
-AWS_RESOURCE_IDENTIFIER="AWS_RESOURCE_IDENTIFIER = \"${GITHUB_IDENTIFIER}\""
-AWS_RESOURCE_IDENTIFIER_SUPERSHORT="AWS_RESOURCE_IDENTIFIER_SUPERSHORT = \"${GITHUB_IDENTIFIER_SS}\""
+aws_resource_identifier="aws_resource_identifier = \"${GITHUB_IDENTIFIER}\""
+aws_resource_identifier_supershort="aws_resource_identifier_supershort = \"${GITHUB_IDENTIFIER_SS}\""
 
 # Special cases
 
@@ -106,8 +106,8 @@ $lb_access_bucket_name
 $security_group_name
 
 #-- AWS --#
-$AWS_RESOURCE_IDENTIFIER
-$AWS_RESOURCE_IDENTIFIER_SUPERSHORT
+$aws_resource_identifier
+$aws_resource_identifier_supershort
 
 #-- Certificates --#
 $sub_domain_name

@@ -106,7 +106,7 @@ $lb_access_bucket_name
 $security_group_name
 
 #-- AWS --#
-$AWS_RESOURCE_IDENTIFIER_SUPERSHORT
+$AWS_RESOURCE_IDENTIFIER
 $AWS_RESOURCE_IDENTIFIER_SUPERSHORT
 
 #-- Certificates --#

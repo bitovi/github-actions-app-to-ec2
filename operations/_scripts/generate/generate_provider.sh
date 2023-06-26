@@ -18,25 +18,31 @@ terraform {
   required_version = ">=0.13"
 
   required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "~>3.0.0"
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.30"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = ">= 2.2"
     }
   }
 
-  backend "azurerm" {
-    resource_group_name  = "$azure_resource_identifier"
-    storage_account_name = "$AZURE_STORAGE_ACCOUNT"
-    container_name       = "$TF_STATE_BUCKET"
-    key                  = "state"
+  backend "s3" {
+    region  = "$AWS_DEFAULT_REGION"
+    bucket  = "$TF_STATE_BUCKET"
+    key     = "tf-state"
+    encrypt = true #AES-256encryption
   }
 }
 
-  provider "azurerm" {
-    features {
-      resource_group {
-        prevent_deletion_if_contains_resources = false
-    }
+provider "aws\ {
+  region = "$AWS_DEFAULT_REGION"
+  default_tags {
+    tags = merge(
+      local.aws_tags,
+      var.additional_tags
+    )
   }
 }
 PROVIDER_HCL
